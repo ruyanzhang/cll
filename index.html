@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<!-- manifest="cache.manifest" -->
+<head>
+    <meta charset="utf-8" />
+    <title>音乐</title>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no" /> <!-- windows phone 点击无高光 -->
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> IOS顶栏变黑 -->
+    <!-- <link rel="apple-touch-icon" href="images/xxx.png" /> IOS高光图标 144x144  -->
+    <!-- <link rel="apple-touch-icon-precomposed" href="images/xxx.png" /> IOS无高光图标 144x144 -->
+</head>
+<body>
+
+<div class="lrc-box"></div>
+<div class="header">
+    <!--<a class="header-left icon-bg" href="javascript:void 0;"></a>
+    <a class="header-right icon-bg" href="javascript:void 0;"></a>-->
+    mp3频道
+</div>
+<div class="music-info">
+    <p class="music-cover"><img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002GtXj31zkIFG.jpg?max_age=2592000"/></p>
+    <p class="music-name">歌曲名称</p>
+    <p class="music-singer">演唱歌手</p>
+</div>
+<div class="music-player" id="music-player">
+    <div class="music-player-slider-wrap">
+        <div class="music-player-slider">
+            <div class="music-player-slide-bar">
+                <span class="music-player-slide-bar-dot"></span>
+            </div>
+        </div>
+    </div>
+    <div class="music-player-time">
+        <p class="music-player-time-play">00:00</p>
+        <p class="music-player-time-total">00:00</p>
+    </div>
+    <div class="music-player-button">
+        <span class="music-love icon-bg"></span>
+        <span class="music-player-button-pre icon-bg"></span>
+        <span class="music-player-button-play icon-bg"></span>
+        <span class="music-player-button-next icon-bg"></span>
+        <span class="music-style music-older icon-bg"></span>
+    </div>
+</div>
+<audio id="music-audio"></audio>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="/static/bundle.js"></script>
+</body>
+</html>

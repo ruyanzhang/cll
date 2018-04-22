@@ -1,0 +1,12 @@
+{
+  "modules": false,
+  "plugins": {
+    "autoprefixer": {
+      "grid": true,
+      "browsers": ['last 2 versions']
+    },
+    "postcss-px2rem":{
+      "remUnit": 64
+    }
+  }
+}
