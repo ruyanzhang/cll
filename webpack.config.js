@@ -19,7 +19,7 @@ module.exports = {
     disableHostCheck:true
   },
   plugins: [
-
+    new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
      rules: [

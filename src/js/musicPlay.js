@@ -106,7 +106,7 @@ export default class MusicPlay{
         }
     };
     _init=()=>{
-        this.musicPlayer.addEventListener('canplay',function () {
+        this.musicPlayer.addEventListener('canplay', ()=>{
             const totalTime = this.totalTime();
             const currentTime = this.currentTime();
             this.songPlayTime(totalTime,currentTime);
