@@ -94,7 +94,7 @@ export default class MusicPlay{
         clearTimeout(this._musicTimer);
     };
     totalTime=()=>{
-		return this.musicPlayer.duration || 0;
+	return this.musicPlayer.duration || 0;
     };
     currentTime=()=>{
         return this.musicPlayer.currentTime || 0;
