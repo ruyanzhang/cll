@@ -43,8 +43,7 @@ export default class MusicPlay{
         if(mode===0 || mode===1){
             if(direction==='next'){
                 songIndex=(songIndex+1) % length;
-            }
-            if(direction === "pre"){
+            }else{
                 songIndex--;
                 if(songIndex < 0){
                     songIndex = length-1;
@@ -76,7 +75,7 @@ export default class MusicPlay{
     hideLrcBox=()=>{
         $('.lrc-box').css('zIndex','-999');
     };
-    goToAimTime=(x)=>{
+    goToAimTime=(x=0)=>{
         const wW = $(window).width();
         const totalTime = this.totalTime();
         this._setCurrentTime(x * totalTime / wW);
@@ -166,7 +165,13 @@ export default class MusicPlay{
         if(songLrc===''){
             $lrcContent.html('暂无歌词');
         }else{
-            getLyrics(songLrc).then((dataTxt)=>this._insertLrc(dataTxt));
+            getLyrics(songLrc).then((dataTxt)=>{
+                if(dataTxt){
+                    this._insertLrc(dataTxt)
+                }else{
+                    $lrcContent.html('暂无歌词');
+                }
+            });
         }
     };
     _lrcScrollTop=(endTop)=>{
